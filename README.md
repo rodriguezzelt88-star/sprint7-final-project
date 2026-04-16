@@ -23,3 +23,29 @@ Tratamiento de Outliers: Evaluación estadística para decidir el mantenimiento 
 Segmentación de Clientes: Creación de nuevas variables categóricas para clasificar a los usuarios por Nivel de Uso (Bajo, Medio, Alto) y Rango de Edad (Joven, Adulto, Adulto Mayor).
 
 Insights Ejecutivos: Traducción de hallazgos técnicos en recomendaciones estratégicas para el negocio.
+
+🚀 Cómo ejecutar el notebook
+Aunque el análisis y las gráficas se pueden visualizar directamente en este repositorio, si deseas interactuar con el código o realizar nuevas pruebas, sigue estos pasos:
+
+Abrir en Google Colab: - Ve a Google Colab.
+
+Selecciona la pestaña GitHub y pega la URL de este repositorio.
+
+Selecciona el archivo .ipynb para cargarlo.
+
+Cargar el Dataset: - Descarga el archivo everpeak_retail.csv de este repositorio.
+
+En la barra lateral izquierda de Colab, haz clic en el icono de carpeta y arrastra el archivo para cargarlo a la sesión actual.
+
+Ejecutar: - Ve al menú Entorno de ejecución > Ejecutar todas.
+
+📋 Guía de Reproducción
+Para asegurar que los resultados sean consistentes con este análisis, sigue este orden de operación:
+
+Paso 1: Importación de librerías. Asegúrate de que las celdas de pandas, numpy, matplotlib y seaborn se ejecuten primero.
+
+Paso 2: Limpieza de Edad. Es obligatorio ejecutar la celda que trata los valores -999, ya que de lo contrario el cálculo del segmento "Adulto Mayor" y los promedios se verán afectados.
+
+Paso 3: Creación de Segmentos. Ejecuta las celdas que contienen la lógica de np.select. Estas crean las columnas grupo_uso y grupo_edad necesarias para las visualizaciones finales.
+
+Paso 4: Análisis Visual. Las celdas finales generan los gráficos countplot. Si cambias algún umbral en las condiciones del paso 3, estos gráficos se actualizarán automáticamente.
